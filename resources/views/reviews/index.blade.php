@@ -29,7 +29,7 @@
           @foreach ($reviews as $review)
             <tr>
               <td>{{ $loop->iteration }}</td>
-              <td>{{ $review->movie->title }}</td>
+              <td>{{ optional($review->movie)->title }}</td>
               <td>{{ $review->user->name }}</td>
               <td>{{ $review->review }}</td>
               <td>{{ $review->rating }}</td>
